@@ -1,0 +1,15 @@
+#
+#  yjcocoa
+#  YJCocoa
+#
+#  Created by 阳君 on 17/8/22.
+#  Copyright © 2017年 YJCocoa. All rights reserved.
+#
+
+if $PROGRAM_NAME == __FILE__
+    lib = File.expand_path('../../lib', __FILE__)
+    $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+end
+
+require 'yjcocoa'
+YJCocoa::Command.run(ARGV)

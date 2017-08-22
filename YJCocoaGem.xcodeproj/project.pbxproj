@@ -1,0 +1,116 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		0A006E2B1F4C5C02009F5968 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0A006E2C1F4C5C02009F5968 /* yjcocoa.gemspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = yjcocoa.gemspec; sourceTree = "<group>"; };
+		0A006E2E1F4C5C09009F5968 /* yjcocoa */ = {isa = PBXFileReference; lastKnownFileType = text; path = yjcocoa; sourceTree = "<group>"; };
+		0A006E321F4C5C09009F5968 /* command.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = command.rb; sourceTree = "<group>"; };
+		0A006E331F4C5C09009F5968 /* gem_version.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = gem_version.rb; sourceTree = "<group>"; };
+		0A006E341F4C5C09009F5968 /* yjcocoa.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = yjcocoa.rb; sourceTree = "<group>"; };
+		0A006E361F4C5D3F009F5968 /* git.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = git.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A006E241F4C5B22009F5968 = {
+			isa = PBXGroup;
+			children = (
+				0A006E2D1F4C5C09009F5968 /* bin */,
+				0A006E2F1F4C5C09009F5968 /* lib */,
+				0A006E2B1F4C5C02009F5968 /* README.md */,
+				0A006E2C1F4C5C02009F5968 /* yjcocoa.gemspec */,
+			);
+			sourceTree = "<group>";
+		};
+		0A006E2D1F4C5C09009F5968 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				0A006E2E1F4C5C09009F5968 /* yjcocoa */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		0A006E2F1F4C5C09009F5968 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				0A006E301F4C5C09009F5968 /* yjcocoa */,
+				0A006E341F4C5C09009F5968 /* yjcocoa.rb */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		0A006E301F4C5C09009F5968 /* yjcocoa */ = {
+			isa = PBXGroup;
+			children = (
+				0A006E351F4C5D1F009F5968 /* git */,
+				0A006E321F4C5C09009F5968 /* command.rb */,
+				0A006E331F4C5C09009F5968 /* gem_version.rb */,
+			);
+			path = yjcocoa;
+			sourceTree = "<group>";
+		};
+		0A006E351F4C5D1F009F5968 /* git */ = {
+			isa = PBXGroup;
+			children = (
+				0A006E361F4C5D3F009F5968 /* git.rb */,
+			);
+			path = git;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		0A006E251F4C5B22009F5968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+			};
+			buildConfigurationList = 0A006E281F4C5B22009F5968 /* Build configuration list for PBXProject "YJCocoaGem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A006E241F4C5B22009F5968;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		0A006E291F4C5B22009F5968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		0A006E2A1F4C5B22009F5968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A006E281F4C5B22009F5968 /* Build configuration list for PBXProject "YJCocoaGem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A006E291F4C5B22009F5968 /* Debug */,
+				0A006E2A1F4C5B22009F5968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A006E251F4C5B22009F5968 /* Project object */;
+}

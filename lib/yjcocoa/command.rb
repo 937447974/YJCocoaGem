@@ -5,7 +5,7 @@
 #  https://github.com/937447974
 #  YJ技术支持群:557445088
 #
-#  Created by 阳君 on 17/8/1.
+#  Created by 阳君 on 17/8/22.
 #  Copyright © 2017年 YJCocoa. All rights reserved.
 #
 
@@ -20,16 +20,12 @@ module YJCocoa
         self.abstract_command = true
         self.command = 'yjcocoa'
         self.version = VERSION
-        self.description = 'YJ系列开源工具。'
+        self.description = 'YJCocoa, the Cocoa library package manager.'
         
     end
     
     # Commands
-    class Command < CLAide::Command
-        
-        require 'yjcocoa/git/git'
-        
-    end
-    
+    require 'yjcocoa/git/git'
+
 end
 

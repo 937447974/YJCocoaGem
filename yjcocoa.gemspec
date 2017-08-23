@@ -10,7 +10,7 @@
 #
 #  http://guides.rubygems.org
 # gem build yjcocoa.gemspec
-# gem install yjcocoa-17.8.1.gem
+# gem install yjcocoa-17.8.22.gem
 # gem push squid-utils-0.1.0.gem
 
 require File.expand_path('../lib/yjcocoa/gem_version', __FILE__)
@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
     s.homepage = "https://github.com/937447974/YJCocoaGem"
     s.author   = "阳君"
 
-    s.summary     = "The YJCocoa library package manager."
+    s.summary     = "YJCocoa, the Cocoa library package manager."
     s.description = "YJ系列开源工具"
 
     s.files = Dir["lib/**/*.rb"] + %w{ bin/yjcocoa README.md LICENSE }

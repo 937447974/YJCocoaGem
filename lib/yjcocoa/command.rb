@@ -17,13 +17,23 @@ module YJCocoa
     # Usage
     class Command < CLAide::Command
         
+        DEFAULT_OPTIONS = [['--help',    'Show help banner of specified command'],]
+        
         self.abstract_command = true
         self.command = 'yjcocoa'
         self.version = VERSION
         self.description = 'YJCocoa, the Cocoa library package manager.'
         
+        def self.options
+            if root_command?
+                DEFAULT_ROOT_OPTIONS + DEFAULT_OPTIONS
+                else
+                DEFAULT_OPTIONS
+            end
+        end
+
     end
-    
+
     # Commands
     require 'yjcocoa/git/git'
 

@@ -14,6 +14,7 @@
 		0A006E331F4C5C09009F5968 /* gem_version.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = gem_version.rb; sourceTree = "<group>"; };
 		0A006E341F4C5C09009F5968 /* yjcocoa.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = yjcocoa.rb; sourceTree = "<group>"; };
 		0A006E361F4C5D3F009F5968 /* git.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = git.rb; sourceTree = "<group>"; };
+		0AE772371F4D25E000432AA9 /* git_pull.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = git_pull.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				0A006E361F4C5D3F009F5968 /* git.rb */,
+				0AE772371F4D25E000432AA9 /* git_pull.rb */,
 			);
 			path = git;
 			sourceTree = "<group>";

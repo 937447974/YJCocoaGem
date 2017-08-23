@@ -21,13 +21,8 @@ module YJCocoa
         
     end
     
-    #        # Commands
-    #        class Git < Command
-    #
-    #            require 'yjcocoa/git/git'
-    #
-    #        end
-    
+    # Commands
+    require 'yjcocoa/git/git_pull'
     
 end
 

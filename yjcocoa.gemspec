@@ -8,7 +8,7 @@
 #  Created by 阳君 on 17/8/1.
 #  Copyright © 2017年 YJCocoa. All rights reserved.
 #
-#  http://guides.rubygems.org
+# http://guides.rubygems.org/specification-reference/
 # gem build yjcocoa.gemspec
 # gem install yjcocoa-17.8.22.gem
 # gem push squid-utils-0.1.0.gem

@@ -60,7 +60,7 @@ module YJCocoa
                     unless self.currentBranch
                         list = (`git branch`).split("\n")
                         if list.size >= 2
-                            headBranch
+                            headBranch = "master"
                             list.each { |item|
                                 if item =~ /\* /
                                     headBranch = item.gsub(/\* /, "")

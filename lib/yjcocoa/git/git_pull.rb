@@ -73,6 +73,7 @@ module YJCocoa
                         end
                     end
                     `git stash pop` if localChanges
+                    puts
                 }
             }
             thread.join

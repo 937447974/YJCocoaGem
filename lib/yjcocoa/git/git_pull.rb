@@ -11,26 +11,27 @@
 
 module YJCocoa
 
-    # Usage
     class GitPull < Git
 
         self.command = 'pull'
         self.summary = 'git pull'
         self.description = 'git pull 当前文件夹下所有 gits 和 branchs'
 
-        attr_accessor :currentBranch #是否只拉取当前分支
-        attr_accessor :gits # git array
-
-        # Options
         def self.options
             [['--current-branch', '只拉取当前分支'],]
         end
+    
+        # property
+        attr_accessor :currentBranch #是否只拉取当前分支
+        attr_accessor :gits # git array
 
+        # 初始化
         def initialize(argv)
             super
             self.currentBranch = argv.flag?('current-branch', false)
         end
 
+        # businrss
         def run
             self.buildGitPaths
             if self.gits.empty?

@@ -10,6 +10,7 @@
 #
 
 require 'claide'
+require 'colored2'
 require 'yjcocoa/gem_version'
 
 module YJCocoa
@@ -17,7 +18,7 @@ module YJCocoa
     # Usage
     class Command < CLAide::Command
         
-        DEFAULT_OPTIONS = [['--help',    'Show help banner of specified command'],]
+        DEFAULT_OPTIONS = [['--help', 'Show help banner of specified command'],]
         
         self.abstract_command = true
         self.command = 'yjcocoa'

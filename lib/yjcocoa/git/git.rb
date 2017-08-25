@@ -19,6 +19,18 @@ module YJCocoa
         self.summary = 'git 工具包'
         self.description = 'git 工具包'
         
+        def gitExist?
+            if File.exist?(".git")
+                return true
+            elsif Dir.pwd == "/"
+                puts "fatal: Not a git repository (or any of the parent directories): .git".red
+                return false
+            end
+            Dir.chdir("..") {
+                return self.gitExist?
+            }
+        end
+        
     end
     
     # Commands

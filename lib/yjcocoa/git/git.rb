@@ -16,8 +16,8 @@ module YJCocoa
         
         self.abstract_command = true
         self.command = 'git'
-        self.summary = 'git 工具包'
-        self.description = 'git 工具包'
+        self.summary = 'git commands'
+        self.description = 'These are common Git commands used in YJCocoa.'
         
         def gitExist?
             if File.exist?(".git")
@@ -35,6 +35,7 @@ module YJCocoa
     
     # Commands
     require 'yjcocoa/git/git_pull'
+    require 'yjcocoa/git/git_tag'
     
 end
 

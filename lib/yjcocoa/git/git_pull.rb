@@ -36,11 +36,11 @@ module YJCocoa
             self.buildGitPaths
             if self.gits.empty?
                 if self.gitExist?
-                    self.gitPullRun
+                    self.gitPull
                 end
             else
                 self.gits.each { |path|
-                    self.gitPullRun(path)
+                    self.gitPull(path)
                 }
             end
         end
@@ -52,7 +52,7 @@ module YJCocoa
             }
         end
 
-        def gitPullRun(path=".")
+        def gitPull(path=".")
             thread = Thread.new {
                 Dir.chdir(path) {
                     puts "YJCocoa git pull #{path}/.git".green

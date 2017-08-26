@@ -3,7 +3,8 @@
 #  YJCocoa
 #
 #  https://github.com/937447974
-#  YJ技术支持群:557445088
+#  YJ技术支持群: 557445088
+#  Email: 937447974@qq.com
 #
 #  Created by 阳君 on 17/8/1.
 #  Copyright © 2017年 YJCocoa. All rights reserved.

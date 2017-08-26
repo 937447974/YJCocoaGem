@@ -11,6 +11,6 @@
 
 module YJCocoa
     
-    VERSION = '17.8.22'.freeze unless defined? YJCocoa::VERSION
+    VERSION = '17.8.26'.freeze unless defined? YJCocoa::VERSION
     
 end

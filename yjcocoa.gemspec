@@ -12,7 +12,7 @@
 # http://guides.rubygems.org/specification-reference/
 # gem build yjcocoa.gemspec
 # gem install yjcocoa-17.8.22.gem
-# gem push squid-utils-0.1.0.gem
+# gem push yjcocoa-17.8.26.gem
 
 require File.expand_path('../lib/yjcocoa/gem_version', __FILE__)
 require 'date'
@@ -35,11 +35,8 @@ Gem::Specification.new do |s|
     s.executables   = %w{ yjcocoa }
     s.require_paths = %w{ lib }
 
-    s.add_runtime_dependency 'claide',        '>= 1.0.2', '< 2.0'
-    s.add_runtime_dependency 'ruby-macho',    '~> 1.1'
-
-    s.add_development_dependency 'bundler', '~> 1.3'
-    s.add_development_dependency 'rake', '~> 10.0'
+    s.add_runtime_dependency 'claide',   '~> 1.0', '>= 1.0.2'
+    s.add_runtime_dependency 'colored2', '~> 3.1', '>= 3.1.2'
 
     ## Make sure you can build the gem on older versions of RubyGems too:
     s.rubygems_version = "1.6.2"

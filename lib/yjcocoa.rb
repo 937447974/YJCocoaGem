@@ -12,10 +12,9 @@
 require 'rubygems'
 require 'claide'
 require 'colored'
-require 'yjcocoa/command'
 
 module YJCocoa
     
-    autoload :Command, 'cocoapods/command'
+    require 'yjcocoa/command'
 
 end

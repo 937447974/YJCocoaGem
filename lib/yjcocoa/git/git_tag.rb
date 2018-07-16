@@ -9,10 +9,13 @@
 #  Copyright © 2017年 YJCocoa. All rights reserved.
 #
 
+require 'date'
+
 module YJCocoa
     
     class GitTag < Git
         
+        self.abstract_command = false
         self.command = 'tag'
         self.summary = 'git tag'
         self.description = <<-DESC
@@ -42,8 +45,11 @@ module YJCocoa
         
         # businrss
         def validate!
-            exit 0 unless self.gitExist?
-            self.banner! unless self.addTag || self.deleteTags
+            super
+            if self.class == YJCocoa::GitTag
+                exit 0 unless self.gitExist?
+                self.banner! unless self.addTag || self.deleteTags
+            end
         end
         
         def run
@@ -67,5 +73,8 @@ module YJCocoa
         end
         
     end
+
+    # Commands
+    require 'yjcocoa/git/git_tag_add'
 
 end

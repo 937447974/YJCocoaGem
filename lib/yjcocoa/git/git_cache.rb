@@ -41,11 +41,8 @@ module YJCocoa
         
         # businrss
         def validate!
+            super
             exit 0 unless self.gitExist?
-            unless File.exist?(".git")
-                puts "需在 git 仓库的根目录执行".red
-                self.banner!
-            end
             unless self.paths
                 puts "文件路径为空".red
                 self.banner!

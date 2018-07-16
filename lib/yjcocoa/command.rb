@@ -11,6 +11,7 @@
 
 require 'claide'
 require 'colored2'
+require 'date'
 require 'fileutils'
 require 'yjcocoa/gem_version'
 

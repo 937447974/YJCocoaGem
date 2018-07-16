@@ -9,8 +9,6 @@
 #  Copyright © 2017年 YJCocoa. All rights reserved.
 #
 
-require 'date'
-
 module YJCocoa
     
     class GitTag < Git
@@ -20,21 +18,21 @@ module YJCocoa
         self.summary = 'git tag'
         self.description = <<-DESC
             操作 tag 并同步到服务器
-            
-            1. 增加tag 1.0：yjcocoa git tag --add=1.0
-            
-            2. 删除多个tag 1.0 和 2.0：yjcocoa git tag --delete=1.0,2.0
         DESC
         
         def self.options
-            [['--add', '增加tag并推送到服务器'],
-            ['--delete', '删除多个tags并推送到服务器'],]
+            if self == YJCocoa::GitTag
+                [['--add', '增加 tag, 多 tag 用 "," 分隔'],
+                ['--delete', '删除 tag, 多 tag 用 "," 分隔']] + super
+            else
+                super
+            end
         end
-    
+
         # property
         attr_accessor :addTag
         attr_accessor :deleteTags
-        
+
         # 初始化
         def initialize(argv)
             super
@@ -42,16 +40,16 @@ module YJCocoa
             self.deleteTags = argv.option('delete')
             self.deleteTags = self.deleteTags.split(",").reject {|i| i.empty? } if self.deleteTags
         end
-        
+
         # businrss
         def validate!
             super
+            exit 0 unless self.gitExist?
             if self.class == YJCocoa::GitTag
-                exit 0 unless self.gitExist?
                 self.banner! unless self.addTag || self.deleteTags
             end
         end
-        
+
         def run
             if self.addTag
                 self.gitTagAdd
@@ -59,22 +57,23 @@ module YJCocoa
             end
             self.gitTagDelete if self.deleteTags && !self.deleteTags.empty?
         end
-        
+
         def gitTagAdd
             puts "YJCocoa git add tag #{self.addTag}".green
             system("git push origin #{self.addTag}") if system("git tag #{self.addTag}")
         end
-        
+
         def gitTagDelete
             puts "YJCocoa git delete tags #{self.deleteTags}".green
             self.deleteTags.each { |tag|
                 system("git push origin :refs/tags/#{tag}") if system("git tag -d #{tag}")
             }
         end
-        
+
     end
 
     # Commands
     require 'yjcocoa/git/git_tag_add'
+    require 'yjcocoa/git/git_tag_delete'
 
 end

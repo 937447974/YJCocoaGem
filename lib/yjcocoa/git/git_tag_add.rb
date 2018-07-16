@@ -16,33 +16,21 @@ module YJCocoa
         
         self.abstract_command = false
         self.command = 'add'
-        self.summary = 'git tag add'
-        self.description = '添加默认 tag(git库名-%Y%m%d%H%M) 并推送到服务器.'
+        self.summary = '添加默认 tag(git库名-%Y%m%d%H%M)'
+        self.description = '添加默认 tag(git库名-%Y%m%d%H%M)'
         
-        def self.options
-            DEFAULT_OPTIONS
-        end
-    
-        def validate!
-            super
-            if self.class == YJCocoa::GitTagAdd
-                unless File.exist?('.git')
-                    puts "需在项目根目录执行".red
-                    self.banner!
-                end
-            end
-        end
-    
         def run
-            unless File.exist?('.git')
-                puts "需在项目根目录执行".red
-                self.banner!
+            if File.exist?(".git")
+                tag = File.basename(Dir.pwd)
+                tag << '-'
+                tag << Time.now.strftime("%Y%m%d%H%M")
+                puts "YJCocoa build tag #{tag}".green
+                system("yjcocoa git tag --add=#{tag}")
+                else
+                Dir.chdir("..") {
+                    self.run
+                }
             end
-            tag = File.basename(Dir.pwd)
-            tag << '-'
-            tag << Time.now.strftime("%Y%m%d%H%M")
-            puts "yjcocoa build tag #{tag}".green
-            system("yjcocoa git tag --add=#{tag}")
         end
         
     end

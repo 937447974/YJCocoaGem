@@ -16,7 +16,7 @@ module YJCocoa
         
         self.abstract_command = true
         self.command = 'git'
-        self.summary = 'git commands'
+        self.summary = 'Git commands'
         self.description = 'These are common Git commands used in YJCocoa.'
         
         def gitExist?

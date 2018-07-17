@@ -56,7 +56,7 @@ module YJCocoa
                 result = STDIN.gets.chomp.downcase
                 if result.empty?
                     result = answersDowncase.first
-                    print "default: #{result}".yellow
+                    puts "select default: #{result}".yellow
                 else
                     result = "yes" if result == "y"
                     result = "no" if result == "n"

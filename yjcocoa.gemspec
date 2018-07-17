@@ -13,6 +13,9 @@
 # gem build yjcocoa.gemspec
 # gem install yjcocoa-17.8.22.gem
 # gem push yjcocoa-17.8.26.gem
+#
+#git config --local user.name "阳君"
+#git config --local user.email "937447974@qq.com"
 
 require File.expand_path('../lib/yjcocoa/gem_version', __FILE__)
 require 'date'

@@ -24,6 +24,8 @@
 		4A167BB720FC80860031A9ED /* pod.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = pod.rb; sourceTree = "<group>"; };
 		4A167BBA20FC81600031A9ED /* pod_release.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = pod_release.rb; sourceTree = "<group>"; };
 		4A5B41C520FD8803005A0612 /* log.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = log.rb; sourceTree = "<group>"; };
+		4A5B41C620FD8D2A005A0612 /* product_class.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = product_class.rb; sourceTree = "<group>"; };
+		4A5B41C720FD8D2A005A0612 /* pod_dependency.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = pod_dependency.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -84,8 +86,10 @@
 		4A167BB620FC804B0031A9ED /* pod */ = {
 			isa = PBXGroup;
 			children = (
+				4A5B41C720FD8D2A005A0612 /* pod_dependency.rb */,
 				4A167BBA20FC81600031A9ED /* pod_release.rb */,
 				4A167BB720FC80860031A9ED /* pod.rb */,
+				4A5B41C620FD8D2A005A0612 /* product_class.rb */,
 			);
 			path = pod;
 			sourceTree = "<group>";

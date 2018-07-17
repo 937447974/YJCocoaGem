@@ -22,8 +22,9 @@ module YJCocoa
     end
     
     # Commands
+    require 'yjcocoa/pod/pod_dependency'
     require 'yjcocoa/pod/pod_release'
-
+    
 end
 
 

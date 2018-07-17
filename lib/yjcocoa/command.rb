@@ -9,13 +9,9 @@
 #  Copyright © 2017年 YJCocoa. All rights reserved.
 #
 
-require 'claide'
-require 'colored2'
-require 'date'
-require 'fileutils'
-require 'yjcocoa/gem_version'
-
 module YJCocoa
+    
+    require 'yjcocoa/gem_version'
     
     # Usage
     class Command < CLAide::Command
@@ -75,6 +71,8 @@ module YJCocoa
 
     # Commands
     require 'yjcocoa/git/git'
+    require 'yjcocoa/log/log'
+    require 'yjcocoa/pod/pod'
 
 end
 

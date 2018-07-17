@@ -11,7 +11,10 @@
 
 require 'rubygems'
 require 'claide'
-require 'colored'
+require 'colored2'
+require 'date'
+require 'fileutils'
+require 'json'
 
 module YJCocoa
     

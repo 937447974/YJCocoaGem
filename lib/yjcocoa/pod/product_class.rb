@@ -1,5 +1,5 @@
 #
-#  pod.rb
+#  product_class.rb
 #  YJCocoa
 #
 #  https://github.com/937447974

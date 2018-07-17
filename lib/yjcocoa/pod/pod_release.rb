@@ -1,5 +1,5 @@
 #
-#  pod.rb
+#  pod_release.rb
 #  YJCocoa
 #
 #  https://github.com/937447974

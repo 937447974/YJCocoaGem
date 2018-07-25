@@ -50,3 +50,7 @@ build-iPhoneSimulator/
 .rvmrc
 
 YJCocoaGem.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Node
+node_modules/
+package-lock.json

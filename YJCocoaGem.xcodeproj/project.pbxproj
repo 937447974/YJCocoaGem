@@ -27,6 +27,8 @@
 		4A5B41C620FD8D2A005A0612 /* product_class.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = product_class.rb; sourceTree = "<group>"; };
 		4A5B41C720FD8D2A005A0612 /* pod_dependency.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = pod_dependency.rb; sourceTree = "<group>"; };
 		4A5B41C920FD92D2005A0612 /* pod_lib.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = pod_lib.rb; sourceTree = "<group>"; };
+		4A7B60DD2109BF5B00241F6E /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		4A7B60DE2109BF5C00241F6E /* commitlint.config.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = commitlint.config.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -35,6 +37,8 @@
 			children = (
 				0A006E2D1F4C5C09009F5968 /* bin */,
 				0A006E2F1F4C5C09009F5968 /* lib */,
+				4A7B60DE2109BF5C00241F6E /* commitlint.config.js */,
+				4A7B60DD2109BF5B00241F6E /* package.json */,
 				0A006E2B1F4C5C02009F5968 /* README.md */,
 				0A006E2C1F4C5C02009F5968 /* yjcocoa.gemspec */,
 			);

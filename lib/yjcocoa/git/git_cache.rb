@@ -26,7 +26,11 @@ module YJCocoa
         DESC
         
         def self.options
-            [['--delete-path', '删除的文件路径，多个路径用‘,’隔开']]
+            if self == YJCocoa::GitCache
+                [['--delete-path', '删除的文件路径，多个路径用‘,’隔开']] + super
+            else
+                super
+            end
         end
         
         # property
@@ -51,7 +55,7 @@ module YJCocoa
         
         def run
             self.cleanWorkDirectory
-            answer = self.askWithAnswers("强制推动您的本地更改覆盖您的GitHub仓库", ["Yes", "No"])
+            answer = self.askWithAnswers("强制推动您的本地更改覆盖您的远端仓库", ["Yes", "No"])
             if answer == "yes"
                 self.pushOrigin
                 self.cleanRepository

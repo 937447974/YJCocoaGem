@@ -15,6 +15,7 @@
     "main": "commitlint.config.js",
     "devDependencies": {
         "@commitlint/config-conventional": "^7.0.1",
+        "@commitlint/prompt-cli": "^7.0.0",
         "husky": "^0.14.3"
     },
     "scripts": {

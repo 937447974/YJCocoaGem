@@ -57,6 +57,7 @@ module YJCocoa
                 Dir.chdir(path) {
                     puts "YJCocoa git pull #{path}/.git".green
                     localChanges = !(`git stash` =~ /No local changes to save/)
+                    `git pull -p`
                     system("git pull")
                     unless self.currentBranch
                         list = (`git branch`).split("\n")

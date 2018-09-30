@@ -2,7 +2,7 @@
 
 [![Language: Ruby](https://img.shields.io/badge/language-Ruby-orange.svg?style=flat)](https://www.ruby-lang.org/zh_cn/) 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/937447974/YJCocoaGem/blob/master/LICENSE) 
-[![](https://img.shields.io/badge/gem-18.07.17-orange.svg?style=flat)](https://rubygems.org/gems/yjcocoa) 
+[![](https://img.shields.io/badge/gem-18.09.30-orange.svg?style=flat)](https://rubygems.org/gems/yjcocoa) 
 ![QQ群](https://img.shields.io/badge/QQ群-557445088-blue.svg?style=flat)
 
 # YJCocoaGem
@@ -49,3 +49,4 @@ YJ技术支持群：557445088
 CSDN：http://blog.csdn.net/y550918116j
 
 GitHub：https://github.com/937447974
+

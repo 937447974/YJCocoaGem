@@ -51,11 +51,9 @@ module YJCocoa
         end
 
         def run
-            if self.addTag
-                self.gitTagAdd
-                puts
-            end
             self.gitTagDelete if self.deleteTags && !self.deleteTags.empty?
+            puts
+            self.gitTagAdd if self.addTag
         end
 
         def gitTagAdd

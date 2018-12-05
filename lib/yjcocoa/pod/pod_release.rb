@@ -74,9 +74,9 @@ module YJCocoa
         private def check (pods, line)
             pods.each { |pod|
                 if line.include?(pod)
-                    pods.delete(pod)
                     line.split(',').each { |item|
                         if item.include?("tag") || item.include?("branch")
+                            pods.delete(pod)
                             return "#{pod}, #{item.chomp}"
                         end
                     }

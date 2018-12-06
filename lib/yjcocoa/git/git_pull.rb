@@ -15,20 +15,20 @@ module YJCocoa
 
         self.command = 'pull'
         self.summary = 'git pull'
-        self.description = 'git pull 当前文件夹下所有 gits 和 branchs'
+        self.description = 'git pull 当前文件夹下所有 gits'
 
         def self.options
-            [['--current-branch', '只拉取当前分支'],]
+            [['--all', 'pull all branch'],]
         end
     
         # property
-        attr_accessor :currentBranch #是否只拉取当前分支
+        attr_accessor :all #是否拉取所有分支
         attr_accessor :gits # git array
 
         # 初始化
         def initialize(argv)
             super
-            self.currentBranch = argv.flag?('current-branch', false)
+            self.all = argv.flag?('all', false)
         end
 
         # businrss
@@ -57,9 +57,8 @@ module YJCocoa
                 Dir.chdir(path) {
                     puts "YJCocoa git pull #{path}/.git".green
                     localChanges = !(`git stash` =~ /No local changes to save/)
-                    `git pull -p`
-                    system("git pull")
-                    unless self.currentBranch
+                    system("git pull -p")
+                    if self.all
                         list = (`git branch`).split("\n")
                         if list.size >= 2
                             headBranch = "master"

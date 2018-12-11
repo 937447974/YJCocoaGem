@@ -23,6 +23,10 @@
 		4A167BB520FC71DF0031A9ED /* test.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = test.rb; sourceTree = "<group>"; };
 		4A167BB720FC80860031A9ED /* pod.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = pod.rb; sourceTree = "<group>"; };
 		4A167BBA20FC81600031A9ED /* pod_release.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = pod_release.rb; sourceTree = "<group>"; };
+		4A33E86121BB72C000B3C618 /* unused.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = unused.rb; sourceTree = "<group>"; };
+		4A33E86221BB753F00B3C618 /* unused_class.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = unused_class.rb; sourceTree = "<group>"; };
+		4A33E86321BB769800B3C618 /* unused_image.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = unused_image.rb; sourceTree = "<group>"; };
+		4A33E86421BB769800B3C618 /* unused_method.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = unused_method.rb; sourceTree = "<group>"; };
 		4A5B41C520FD8803005A0612 /* log.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = log.rb; sourceTree = "<group>"; };
 		4A5B41C620FD8D2A005A0612 /* product_class.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = product_class.rb; sourceTree = "<group>"; };
 		4A5B41C720FD8D2A005A0612 /* pod_dependency.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = pod_dependency.rb; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 				4A5B41C320FD87D8005A0612 /* log */,
 				4A167BB620FC804B0031A9ED /* pod */,
 				4A167BB520FC71DF0031A9ED /* test.rb */,
+				4A33E86021BB72A800B3C618 /* unused */,
 			);
 			path = yjcocoa;
 			sourceTree = "<group>";
@@ -98,6 +103,17 @@
 				4A5B41C620FD8D2A005A0612 /* product_class.rb */,
 			);
 			path = pod;
+			sourceTree = "<group>";
+		};
+		4A33E86021BB72A800B3C618 /* unused */ = {
+			isa = PBXGroup;
+			children = (
+				4A33E86221BB753F00B3C618 /* unused_class.rb */,
+				4A33E86321BB769800B3C618 /* unused_image.rb */,
+				4A33E86421BB769800B3C618 /* unused_method.rb */,
+				4A33E86121BB72C000B3C618 /* unused.rb */,
+			);
+			path = unused;
 			sourceTree = "<group>";
 		};
 		4A5B41C320FD87D8005A0612 /* log */ = {

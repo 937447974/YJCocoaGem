@@ -73,6 +73,7 @@ module YJCocoa
     require 'yjcocoa/git/git'
     require 'yjcocoa/log/log'
     require 'yjcocoa/pod/pod'
+    require 'yjcocoa/unused/unused'
 
 end
 

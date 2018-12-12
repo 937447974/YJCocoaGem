@@ -23,7 +23,7 @@ module YJCocoa
             if File.exist?(".git")
                 current_branch = self.current_branch
                 tag = File.basename(Dir.pwd)
-                tag << "-#{current_branch}" unless current_branch =~ /master/
+                tag << "-#{current_branch}" unless current_branch == "master"
                 tag << "-#{Time.now.strftime('%Y%m%d%H%M')}"
                 puts "YJCocoa build tag #{tag}".green
                 system("yjcocoa git tag --add=#{tag}")

@@ -37,10 +37,26 @@ module YJCocoa
             self.output = Dir.pwd + "/YJCocoa.h" unless self.output
         end
         
+        def check_match(item)
+            return true unless self.match
+            self.match.each { |m|
+                return true if item.include?(m)
+            }
+            return false
+        end
+        
+        def check_ignore(item)
+            return false unless self.ignore
+            self.ignore.each { |i|
+                return true if item.include?(i)
+            }
+            return false
+        end
+        
     end
     
     # Commands
-#    require 'yjcocoa/unused/unused_class'
+    require 'yjcocoa/unused/unused_class'
     require 'yjcocoa/unused/unused_method'
 #    require 'yjcocoa/unused/unused_image'
 

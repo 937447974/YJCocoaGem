@@ -58,7 +58,6 @@ module YJCocoa
         def implemented_methods
             lines = `otool -oV #{self.matcho}`.split("\n")
             methods = Hash.new
-            methods.default = []
             lines.each {|line|
                 line_scan = line.scan(/\s*imp 0x\w+ ([+|-]\[.+\s(.+)\])/)
                 if line_scan.count > 0
@@ -66,7 +65,7 @@ module YJCocoa
                     sel = line_scan[0][1]
                     if methods.include?(sel)
                         methods[sel] << imp
-                        else
+                    else
                         methods[sel] = [imp]
                     end
                 end
@@ -84,22 +83,6 @@ module YJCocoa
                 end
             }
             return refs
-        end
-        
-        def check_match(method)
-            return true unless self.match
-            self.match.each { |m|
-                return true if method.include?(m)
-            }
-            return false
-        end
-        
-        def check_ignore(method)
-            return false unless self.ignore
-            self.ignore.each { |i|
-                return true if method.include?(i)
-            }
-            return false
         end
         
     end

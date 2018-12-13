@@ -68,7 +68,7 @@ module YJCocoa
                 line = line#.strip
                 if line.include?("Contents of (__DATA,")
                     key = line
-                    elsif (key)
+                elsif (key)
                     if section.include?(key)
                         section[key] << line
                     else

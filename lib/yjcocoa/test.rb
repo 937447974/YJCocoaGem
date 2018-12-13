@@ -1,8 +1,7 @@
 gem build yjcocoa.gemspec
-gem install yjcocoa-18.12.12.gem
 
-QTVCModel
+gem install yjcocoa-18.12.13.gem
 
-yjcocoa unused class --match-o=/Users/cisdi/Desktop/QingTui_Developer --match=QT
+yjcocoa unused image --dir=/Users/cisdi/Desktop/QingTui/master --ignore=QTComm,Pods,LaunchImage,Emoji,AppIcon
 
 otool -oV /Users/cisdi/Desktop/QingTui_Developer

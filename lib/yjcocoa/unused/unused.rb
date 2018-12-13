@@ -57,7 +57,7 @@ module YJCocoa
     
     # Commands
     require 'yjcocoa/unused/unused_class'
+    require 'yjcocoa/unused/unused_image'
     require 'yjcocoa/unused/unused_method'
-#    require 'yjcocoa/unused/unused_image'
 
 end

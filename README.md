@@ -23,6 +23,7 @@ Commands:
     + git       Git commands
     + log       log 日志解析
     + pod       Pod commands
+    + unused    OC 项目未使用资源查找
 
 Options:
 

@@ -52,7 +52,6 @@ module YJCocoa
         
         # businrss
         def run
-            self.gitPull
             content = []
             File.open(self.podfile, "r") { |file|
                 while line = file.gets   #标准输入流
@@ -63,14 +62,7 @@ module YJCocoa
             puts "YJCocoa Pod Release".green
             puts content.sort * "\n"
         end
-        
-        def gitPull
-            puts "#{self.podfile} git pull".green
-            Dir.chdir(File.dirname(self.podfile)) {| path |
-                system("yjcocoa git pull")
-            }
-        end
-        
+    
         private def check (pods, line)
             pods.each { |pod|
                 if line.include?(pod)

@@ -72,7 +72,7 @@ module YJCocoa
         def deal_with_path(path)
             Dir.chdir(path) {
                 Dir["**/*.{png,jpg}"].each {|filename| self.deal_with_image(filename)}
-                Dir["**/*.{h,m,mm,swift}"].each {|filename| self.deal_with_class(filename)}
+                Dir["**/*.{h,m,mm,swift,xib,storyboard,plist}"].each {|filename| self.deal_with_file(filename)}
             }
         end
         
@@ -88,7 +88,7 @@ module YJCocoa
             end
         end
         
-        def deal_with_class(filename)
+        def deal_with_file(filename)
             self.class_content << File.read(filename) unless File.symlink?(filename)
         end
         

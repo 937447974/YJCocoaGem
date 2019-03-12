@@ -36,6 +36,7 @@ module YJCocoa
     # Commands
     require 'yjcocoa/git/git_branch'
     require 'yjcocoa/git/git_cache'
+    require 'yjcocoa/git/git_checkout'
     require 'yjcocoa/git/git_pull'
     require 'yjcocoa/git/git_tag'
     

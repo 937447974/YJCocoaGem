@@ -33,7 +33,6 @@ module YJCocoa
 
         # businrss
         def validate!
-            exit 0 unless self.gitExist?
             self.banner! unless self.branch
         end
 

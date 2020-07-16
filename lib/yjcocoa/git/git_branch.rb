@@ -31,6 +31,7 @@ module YJCocoa
         # property
         attr_accessor :addBranch
         attr_accessor :deleteBranchs
+        attr_accessor :gits # git array
         
         # 初始化
         def initialize(argv)
@@ -42,18 +43,44 @@ module YJCocoa
         
         # businrss
         def validate!
-            exit 0 unless self.gitExist?
+            super
             self.banner! unless self.addBranch || self.deleteBranchs
         end
         
-        def run
-            if self.addBranch
-                self.gitBranchAdd
-                puts
+        def run    
+            self.buildGitPaths        
+            if self.gits.empty?
+                if self.gitExist?
+                    self.gitRun
+                end
+            else
+                self.gits.each { |path|
+                    self.gitRun(path)
+                }
             end
-            self.gitBranchDelete if self.deleteBranchs && !self.deleteBranchs.empty?
+        end
+
+        def buildGitPaths
+            self.gits = Dir["**/.git"]
+            self.gits.map! { |path|
+                File.dirname(path)
+            }
         end
         
+        def gitRun(path=".")
+            thread = Thread.new {
+                Dir.chdir(path) {
+                    puts "YJCocoa git #{path}/.git".green
+                    self.gitBranchDelete if self.deleteBranchs && !self.deleteBranchs.empty?
+                    if self.addBranch
+                        self.gitBranchAdd
+                        puts
+                    end                   
+                }
+            }
+            thread.join
+        end
+
         def gitBranchAdd
             puts "YJCocoa git add branch #{self.addBranch}".green
             system("git push --set-upstream origin #{self.addBranch}") if system("git checkout -b #{self.addBranch}")

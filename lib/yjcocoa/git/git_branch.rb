@@ -70,25 +70,23 @@ module YJCocoa
         def gitRun(path=".")
             thread = Thread.new {
                 Dir.chdir(path) {
-                    puts "YJCocoa git #{path}/.git".green
+                    puts "YJCocoa git branch #{path}/.git".green
                     self.gitBranchDelete if self.deleteBranchs && !self.deleteBranchs.empty?
-                    if self.addBranch
-                        self.gitBranchAdd
-                        puts
-                    end                   
+                    self.gitBranchAdd    if self.addBranch
+                    puts                  
                 }
             }
             thread.join
         end
 
         def gitBranchAdd
-            puts "YJCocoa git add branch #{self.addBranch}".green
+            puts "add branch #{self.addBranch}".green
             system("git push --set-upstream origin #{self.addBranch}") if system("git checkout -b #{self.addBranch}")
         end
         
         def gitBranchDelete
-            puts "YJCocoa git delete branchs #{self.deleteBranchs}".green
             self.deleteBranchs.each { |branch|
+                puts "delete branchs #{branch}".green
                 system("git branch -d #{branch}")
                 system("git push origin --delete #{branch}")
             }
